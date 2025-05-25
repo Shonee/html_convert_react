@@ -2,7 +2,7 @@
   "name": "html-converter-tool",
   "version": "1.0.0",
   "description": "HTML转换工具，支持多种格式转换",
-  "homepage": "https://myusername.github.io/react-gh-pages",
+  "homepage": "https://shonee.github.io/react-gh-pages",
   "main": "src/index.jsx",
   "scripts": {
     "dev": "webpack serve",
