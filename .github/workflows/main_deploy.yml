@@ -22,7 +22,7 @@ jobs:
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
-        FOLDER: build
+        FOLDER: dist
     # - name: Deploy
     #   run: |
     #     git config --global user.name $user_name
