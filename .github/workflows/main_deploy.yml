@@ -16,21 +16,21 @@ jobs:
     - name: Install and Build
       run: |
         npm install
-        npm run-script build
-    # - name: Deploy
-    #   uses: JamesIves/github-pages-deploy-action@releases/v3
-    #   with:
-    #     GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-    #     BRANCH: gh-pages
-    #     FOLDER: build
+        npm run build
     - name: Deploy
-      run: |
-        git config --global user.name $user_name
-        git config --global user.email $user_email
-        git remote set-url origin https://${github_token}@github.com/${repository}
-        npm run deploy
-      env:
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
-        github_token: ${{ secrets.ACCESS_TOKEN }}
-        repository: 'html_convert_react'
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: build
+    # - name: Deploy
+    #   run: |
+    #     git config --global user.name $user_name
+    #     git config --global user.email $user_email
+    #     git remote set-url origin https://${github_token}@github.com/${repository}
+    #     npm run deploy
+    #   env:
+    #     user_name: 'github-actions[bot]'
+    #     user_email: 'github-actions[bot]@users.noreply.github.com'
+    #     github_token: ${{ secrets.ACCESS_TOKEN }}
+    #     repository: 'html_convert_react'
